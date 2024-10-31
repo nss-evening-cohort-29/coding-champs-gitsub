@@ -4,7 +4,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 100px 50px 100px 100px 100px 100px 100px 100px 100px 100px 100px 50px 100px 100px 100px 100px 100px 50px 100px 100px;
+  grid-template-rows: 100px 50px 25px 100px 100px 100px 25px 100px 100px 100px 100px 50px 25px 50px 25px 100px 100px 50px 100px 100px;
   grid-template-columns: 50px 100px 100px 50px 100px 100px 100px 100px 100px 100px 100px;
 }
 
@@ -21,25 +21,25 @@ body {
 /* navigation bar */
 .item-2 {
   grid-row: 2 / 2 ;
-  grid-column: 5 / 10;
+  grid-column: 5 / 13;
 }
 
 /* pinned */
 .item-3 {
-  grid-row: 4 / 6;
-  grid-column: 5 / 10;
+  grid-row: 4 / 7;
+  grid-column: 5 / 13;
 }
 
 /* form */
 .item-4 {
-  grid-row: 7 / 10 ;
-  grid-column: 5 / 10;
+  grid-row: 8 / 12 ;
+  grid-column: 5 / 13;
 }
 
 /* footer */
 .item-5 {
-  grid-row: 12 / 12 ;
-  grid-column: 5 / 10;
+  grid-row: 14 / 14 ;
+  grid-column: 5 / 13;
 }
 
 
