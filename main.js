@@ -14,6 +14,33 @@ const users =[
   }
 ]
 
+const repository = [
+    { repoName: "gatsby-workshop",
+      repoDescription:"this is a test sample" ,
+      language:"Javascript",
+      favorites: "38",
+      forks: "8",
+      lastUpdated: "19 days ago",
+      issues: "2"
+    },
+    { repoName: "gatsby-workshop",
+      repoDescription:"this is a test sample" ,
+      language:"Javascript",
+      favorites: "38",
+      forks: "8",
+      lastUpdated: "19 days ago",
+      issues: "2"
+    },
+    { repoName: "gatsby-workshop",
+      repoDescription:"this is a test sample" ,
+      language:"Javascript",
+      favorites: "38",
+      forks: "8",
+      lastUpdated: "19 days ago",
+      issues: "2"
+    },
+  ]
+  
 // const pins = [
 //   { repoName: "gatsby-workshop",
 //     repoDescription:"this is a test sample" ,
