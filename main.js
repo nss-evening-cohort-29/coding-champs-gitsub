@@ -14,6 +14,85 @@ const users =[
   }
 ]
 
+const repository = [
+    { repoName: "gatsby-workshop",
+      repoDescription:"this is a test sample" ,
+      language:"Javascript",
+      favorites: "38",
+      forks: "8",
+      lastUpdated: "19 days ago",
+      issues: "2"
+    },
+    { repoName: "gatsby-workshop",
+      repoDescription:"this is a test sample" ,
+      language:"Javascript",
+      favorites: "38",
+      forks: "8",
+      lastUpdated: "19 days ago",
+      issues: "2"
+    },
+    { repoName: "gatsby-workshop",
+      repoDescription:"this is a test sample" ,
+      language:"Javascript",
+      favorites: "38",
+      forks: "8",
+      lastUpdated: "19 days ago",
+      issues: "2"
+    },
+  ]
+
+const packages = [
+  {
+    packName: "Docker",
+    packDescription: "blak blah abladahd",
+  },
+  {
+    packName: "Docker",
+    packDescription: "blak blah abladahd",
+  },
+  {
+    packName: "Docker",
+    packDescription: "blak blah abladahd",
+  },
+  {
+    packName: "Docker",
+    packDescription: "blak blah abladahd",
+  },
+  {
+    packName: "Docker",
+    packDescription: "blak blah abladahd",
+  }
+]
+
+const projects = [
+  {
+    projName: "Project yay",
+    projDescription: "blak blah abladahd",
+    projUpdateDate: "7 hours ago"
+  },
+  {
+    projName: "Project yay",
+    projDescription: "blak blah abladahd",
+    projUpdateDate: "7 hours ago"
+  },
+  {
+    projName: "Project yay",
+    projDescription: "blak blah abladahd",
+    projUpdateDate: "7 hours ago"
+  },
+  {
+    projName: "Project yay",
+    projDescription: "blak blah abladahd",
+    projUpdateDate: "7 hours ago"
+  },
+  {
+    projName: "Project yay",
+    projDescription: "blak blah abladahd",
+    projUpdateDate: "7 hours ago"
+  },
+]
+  
+
 // const pins = [
 //   { repoName: "gatsby-workshop",
 //     repoDescription:"this is a test sample" ,
