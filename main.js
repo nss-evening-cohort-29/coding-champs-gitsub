@@ -114,23 +114,41 @@ const projects = [
 //   },
 // ]
 
-const renderProfile = (user) => {
+const renderProfile = (array) => {
   
 const profileApp = document.querySelector("#profile");
   let domstring = "";
-  for (user of users) {
-  domstring += `<div class="card">
-  <p>Hi everyone</p>
-  <img src=${user.imageUrl} class="card-img-top" alt="${user.id}">
+  for (user of array) {
+  domstring += 
+  `<div class="card">
+    <p>Hi everyone</p>
+    <img src=${user.imageUrl} class="card-img-top" alt="${user.id}">
 
-  </div>
   </div>`
   }
   profileApp.innerHTML = domstring
 
 };
 
-renderProfile();
+renderProfile(users);
+
+
+const renderPackages = (array) => {
+  const packPage = document.querySelector("#packContent")
+  let packDomString = "";
+  for (package of array) {
+    packDomString += 
+  `<div class="pkgCard" class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h4 class="card-title"><b>${package.packName}</b></h4>
+    <p class="card-text">${package.packDescription}</p>
+    <a href="#" class="btn btn-outline-danger" id="learnMore--${package.id}">Learn More</a>
+  </div>`
+  }
+  packPage.innerHTML = packDomString
+ 
+}
+renderPackages(packages)
 
 // const renderPinned = (pins) => {
   
