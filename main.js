@@ -92,28 +92,7 @@ const projects = [
   },
 ]
   
-
-// const pins = [
-//   { repoName: "gatsby-workshop",
-//     repoDescription:"this is a test sample" ,
-//     language:"Javascript",
-//     favorites: "38",
-//     forks: "8",
-//   },
-//   { repoName: "gatsby-workshop",
-//     repoDescription:"this is a test sample" ,
-//     language:"Javascript",
-//     favorites: "38",
-//     forks: "8",
-//   },
-//   { repoName: "gatsby-workshop",
-//     repoDescription:"this is a test sample" ,
-//     language:"Javascript",
-//     favorites: "38",
-//     forks: "8",
-//   },
-// ]
-
+// PROFILE RENDER 
 const renderProfile = (array) => {
   
 const profileApp = document.querySelector("#profile");
@@ -129,10 +108,29 @@ const profileApp = document.querySelector("#profile");
   profileApp.innerHTML = domstring
 
 };
-
 renderProfile(users);
 
-
+// OVERVIEW RENDER
+const renderOverview = (array) => {
+  
+  const profileApp = document.querySelector("#overviewContent");
+    let domstring = "";
+    for (const repo of array) {
+    domstring += 
+    `<div class="pkgCard" class="card" style="width: 18rem;">
+    <div class="card-body" id="overview-card">
+      <h4 class="card-title"><b>${repo.repoName}</b></h4>
+      <p class="card-text">${repo.repoDescription}</p>
+      <p class="card-text">${repo.language}</p>
+      <p class="card-text">${repo.forks}</p>
+      <p class="card-text">${repo.favorites}</p>
+    </div>`
+    }
+    profileApp.innerHTML = domstring;
+  
+  };
+  
+// PACKAGE RENDER
 const renderPackages = (array) => {
   const packPage = document.querySelector("#packContent")
   let packDomString = "";
@@ -148,24 +146,11 @@ const renderPackages = (array) => {
   packPage.innerHTML = packDomString
  
 }
-renderPackages(packages)
 
-// const renderPinned = (pins) => {
-  
-//   const pinApp = document.querySelector("#pinned");
-//     let pinstring = "";
-//     for (pin of pins) {
-//     pinstring += 
-//     `<div id="pinned">
-//     <div class="header">${pin.repoName}</div>
-//     <div class="body">
-//     <p class="text">${pin.repoDescription}</p>
-//     </div>
-//     <div class= "footer" >${pin.language}${pin.favorites}</div>
-//     </div>`
-//     }
-//     pinApp.innerHTML = pinstring
-  
-//   };
-  
-//   renderPinned();
+// USING IF STATEMENTS TO CALL DIFFERENT FUNCTIONS
+if (document.URL.includes("overview.html")) {
+  renderOverview(repository);
+}
+else if (document.URL.includes("packages.html")) {
+  renderPackages(packages);
+}
