@@ -83,11 +83,11 @@
   <!-- FORM BELOW -->
   <!----------------------------------------->
   <div class="item item-proform">
-    <div class="form" id="newProjForm">
+    <div class="form">
       <h4>Create a new project</h4>
       <h6><small>Coordinate, track, and update your work in one place, so projectss stay transparent and on schedule.</small></h6>
 
-      <form>
+      <form id="newProjForm">
       <div class="mb-3">
         <label for="projName" class="form-label">Project board name</label>
         <input type="text" id="projName" class="form-control" placeholder="Enter project name">
@@ -96,7 +96,7 @@
         <label for="packDescription" class="form-label">Description</label>
         <textarea id="packDescription" class="form-control" rows="3" placeholder="Enter project description"></textarea>
       </div>
-      <button type="button" class="btn btn-primary btn-sm" id="create">Create project</button>
+      <button type="submit" class="btn btn-primary btn-sm" id="create">Create project</button>
       </form>
     </div>
   </div>

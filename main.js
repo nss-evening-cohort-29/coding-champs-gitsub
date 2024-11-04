@@ -43,22 +43,27 @@ const repository = [
 
 const packages = [
   {
+    id: 1,
     packName: "Docker",
     packDescription: "A software platform used for building applications based on containers --- small and lightweight execution environments.",
   },
   {
+    id: 2,
     packName: "Apache Maven",
     packDescription: "A default package manager used for the Java programming language and the Java runtime environment.",
   },
   {
+    id: 3,
     packName: "Ruby Gems",
     packDescription: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language.",
   },
   {
+    id: 4,
     packName: "npm",
     packDescription: "A package manager for JavaScript, included with Node.js. npm makes it easy for developers to share and reuse code.",
   },
   {
+    id: 5,
     packName: "Containers",
     packDescription: "A single place for your team to manage Docker images and decide who can see and access your images.",
   }
@@ -66,11 +71,13 @@ const packages = [
 
 const projects = [
   {
+    id: 1,
     projName: "Movie Ranks",
     projDescription: "Creates ratings for watched movies",
     time: "8 hours ago"
   },
   {
+    id: 2,
     projName: "Project Yay",
     projDescription: "A project that utilizing multiple for loops",
     time: "6 days ago"
@@ -132,6 +139,8 @@ const renderPackages = (array) => {
 
 }
 
+
+
 // PROJECTS RENDER
 const renderProjects = (array) => {
   const projectPage = document.querySelector("#projContent")
@@ -158,17 +167,56 @@ const renderProjects = (array) => {
 
 
 
+
+
 // NEW PACKAGE FORM //
 
+const form = document.querySelector("#newPackForm");
 
-const packageForm = document.querySelector("#newPackForm");
+const addPackage = (e) => {
+  e.preventDefault();
+
+  const newPackage = {
+    id: packages.length + 1,
+    packName: document.querySelector("#packName").value,
+    packDescription: document.querySelector("#packDescription").value,
+  }
+
+  packages.push(newPackage);
+  renderPackages(packages);
+  form.reset();
+}
+
+// EVENT LISTENER FOR CREATING PROJECT //
+form.addEventListener ('submit', addPackage);
+
+
+
+
+
+
+// NEW PROJECT FORM //
 
 const projectForm = document.querySelector("#newProjFrom");
 
-// EVENT LISTENER FOR CREATE BUTTON //
-// createButton.addEventListener("click", () => {
-//   renderPackages( )
-// })
+const addProject = (e) => {
+  e.preventDefault();
+
+  const newProject = {
+    id: projects.length + 1,
+    projName: document.querySelector("#projName").value,
+    projDescription: document.querySelector("#projDescription").value,
+    time: "updated " + document.lastModified + " ago"
+  }
+
+  projects.push(newProject);
+  renderPackages(projects);
+  form.reset();
+}
+// EVENT LISTENER FOR CREATING PROJECT //
+
+form.addEventListener ('submit', addPackage);
+
 
 
 
