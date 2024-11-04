@@ -11,9 +11,16 @@
 <body>
 
 <div class="container" id="entireDom">
-
+  <!----------------------------------------->
+  <!-- PROFILE AREA BELOW -->
+  <!----------------------------------------->
     <div id = "profile" class = "item item-1">profile</div>
-    
+  <!----------------------------------------->
+  <!-- PROFILE AREA ABOVE -->
+  <!-----------------------------------------> 
+
+
+
   <!----------------------------------------->
   <!-- NAV BAR BELOW -->
   <!----------------------------------------->
@@ -22,8 +29,6 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
 
       <div class="container-fluid">
-
-        <a class="navbar-brand" href="#">NavBar</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,22 +39,30 @@
 
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="repos.html" id="repoNav">Repositories</a>
+              <a class="nav-link active" aria-current="page" href="overview.html" id="overNav">
+                <img src="https://static-00.iconduck.com/assets.00/github-icon-2048x2048-823jqxdr.png" alt="Icon" class="nav-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+                <u>Overview</u>
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="overview.html" id="overNav">Overview</a>
+              <a class="nav-link" href="repos.html" id="repoNav">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJM1auBCJkMIVvyng1YBThtzvnsATUxqt5tA&s" alt="Icon" class="nav-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+                Repositories
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="projects.html" id="projNav">Projects</a>
+              <a class="nav-link" href="projects.html" id="projNav">
+                <img src="https://e7.pngegg.com/pngimages/1/440/png-clipart-git-computer-icons-merge-source-code-commit-github-sign-git-thumbnail.png" alt="Icon" class="nav-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+                Projects
+              </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="packages.html" id="packNav">Packages</a>
+              <a class="nav-link" href="packages.html" id="packNav">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdl5rKFO6YpFV4dtYIaDOGp1KQk-5s2N-TJA&s" alt="Icon" class="nav-icon" style="width: 20px; height: 20px; vertical-align: middle;">
+                Packages
+              </a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
 
         </div>
 
@@ -67,7 +80,12 @@
   <!----------------------------------------->
   <!-- PINNED BELOW -->
   <!----------------------------------------->
-  <div class="item item-3" id="overviewContent">Overview page</div>
+  <div class="item item-3">
+    <h4>Pinned</h4>
+    <div id="overviewContent">
+        overview page
+    </div>
+  </div>
   <!----------------------------------------->
   <!-- PINNED ABOVE -->
   <!----------------------------------------->
@@ -78,7 +96,25 @@
   <!----------------------------------------->
   <!-- FORM BELOW -->
   <!----------------------------------------->
-  <div class="item item-4">form</div>
+  <div class="item item-4">
+    <h3>Create a new project</h3>
+    <form>
+      <div id="emailHelp" class="form-text">Coordinate, track, and update your work in one place</div>
+      <div class="mb-3">
+        <label class="form-label">Project board name</label>
+        <input type="text" class="form-control" id="project-input" placeholder="Project Name">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Optional">
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button type="submit" class="btn btn-success">Create project</button>
+    </form>
+  </div>
   <!----------------------------------------->
   <!-- FORM ABOVE -->
   <!----------------------------------------->
