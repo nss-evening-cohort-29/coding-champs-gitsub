@@ -1,5 +1,5 @@
 const users =[
-  { imageUrl: "http://kittentoob.com/wp-content/uploads/2015/06/funny-cat-with-a-towel.jpg",
+  { imageUrl: "https://avatars.githubusercontent.com/u/153558930?v=4",
     id: 1,
     name: "Monica Powell",
     handle: "M0nica",
@@ -161,14 +161,16 @@ const renderProjects = (array) => {
 // NEW PACKAGE FORM //
 
 
-// const packageForm = document.querySelector("#newPackForm");
+const packageForm = document.querySelector("#newPackForm");
 
-
+const projectForm = document.querySelector("#newProjFrom");
 
 // EVENT LISTENER FOR CREATE BUTTON //
 // createButton.addEventListener("click", () => {
 //   renderPackages( )
 // })
+
+
 
 
 
