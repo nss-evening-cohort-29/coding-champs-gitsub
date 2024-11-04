@@ -13,7 +13,7 @@
   <div class="container" id="entireDom">
 
     <div id = "profile" class = "item item-1">profile</div>
-    
+
   <!----------------------------------------->
   <!-- NAV BAR BELOW -->
   <!----------------------------------------->
@@ -67,7 +67,8 @@
   <!----------------------------------------->
   <!-- PINNED BELOW -->
   <!----------------------------------------->
-  <div class="item item-3" id="packContent">PACKAGES PAGE</div>
+  <div class="item item-pack">
+  <div id="packContent">PACKAGES PAGE</div></div>
   <!----------------------------------------->
   <!-- PINNED ABOVE -->
   <!----------------------------------------->
@@ -78,7 +79,24 @@
   <!----------------------------------------->
   <!-- FORM BELOW -->
   <!----------------------------------------->
-  <div class="item item-4">form</div>
+  <div class="item item-packform">
+    <div class="form" id="newPackForm">
+      <h4>Create a new package</h4>
+      <h6><small>Coordinate, track, and update your work in one place, so packages stay transparent and on schedule.</small></h6>
+
+      <form>
+      <div class="mb-3">
+        <label for="packName" class="form-label">Package  board name</label>
+        <input type="text" id="packName" class="form-control" placeholder="Enter package name">
+      </div>
+      <div class="mb-3">
+        <label for="packDescription" class="form-label">Description</label>
+        <textarea id="packDescription" class="form-control" rows="3" placeholder="Enter package description"></textarea>
+      </div>
+      <button type="button" class="btn btn-primary btn-sm" id="create">Create package</button>
+      </form>
+    </div>
+  </div>
   <!----------------------------------------->
   <!-- FORM ABOVE -->
   <!----------------------------------------->
@@ -127,7 +145,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
           </li>
-    
+
         </ul>
   </div>
   <!----------------------------------------->

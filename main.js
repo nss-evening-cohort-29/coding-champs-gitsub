@@ -44,61 +44,46 @@ const repository = [
 const packages = [
   {
     packName: "Docker",
-    packDescription: "blak blah abladahd",
+    packDescription: "A software platform used for building applications based on containers --- small and lightweight execution environments.",
   },
   {
-    packName: "Docker",
-    packDescription: "blak blah abladahd",
+    packName: "Apache Maven",
+    packDescription: "A default package manager used for the Java programming language and the Java runtime environment.",
   },
   {
-    packName: "Docker",
-    packDescription: "blak blah abladahd",
+    packName: "Ruby Gems",
+    packDescription: "A standard format for distributing Ruby programs and libraries used for the Ruby programming language.",
   },
   {
-    packName: "Docker",
-    packDescription: "blak blah abladahd",
+    packName: "npm",
+    packDescription: "A package manager for JavaScript, included with Node.js. npm makes it easy for developers to share and reuse code.",
   },
   {
-    packName: "Docker",
-    packDescription: "blak blah abladahd",
+    packName: "Containers",
+    packDescription: "A single place for your team to manage Docker images and decide who can see and access your images.",
   }
 ]
 
 const projects = [
   {
-    projName: "Project yay",
-    projDescription: "blak blah abladahd",
-    projUpdateDate: "7 hours ago"
+    projName: "Movie Ranks",
+    projDescription: "Creates ratings for watched movies",
+    time: "8 hours ago"
   },
   {
-    projName: "Project yay",
-    projDescription: "blak blah abladahd",
-    projUpdateDate: "7 hours ago"
-  },
-  {
-    projName: "Project yay",
-    projDescription: "blak blah abladahd",
-    projUpdateDate: "7 hours ago"
-  },
-  {
-    projName: "Project yay",
-    projDescription: "blak blah abladahd",
-    projUpdateDate: "7 hours ago"
-  },
-  {
-    projName: "Project yay",
-    projDescription: "blak blah abladahd",
-    projUpdateDate: "7 hours ago"
+    projName: "Project Yay",
+    projDescription: "A project that utilizing multiple for loops",
+    time: "6 days ago"
   },
 ]
-  
-// PROFILE RENDER 
+
+// PROFILE RENDER
 const renderProfile = (array) => {
-  
+
 const profileApp = document.querySelector("#profile");
   let domstring = "";
   for (user of array) {
-  domstring += 
+  domstring +=
   `<div class="card">
     <p>Hi everyone</p>
     <img src=${user.imageUrl} class="card-img-top" alt="${user.id}">
@@ -112,11 +97,11 @@ renderProfile(users);
 
 // OVERVIEW RENDER
 const renderOverview = (array) => {
-  
+
   const profileApp = document.querySelector("#overviewContent");
     let domstring = "";
     for (const repo of array) {
-    domstring += 
+    domstring +=
     `<div class="pkgCard" class="card" style="width: 18rem;">
     <div class="card-body" id="overview-card">
       <h4 class="card-title"><b>${repo.repoName}</b></h4>
@@ -127,25 +112,65 @@ const renderOverview = (array) => {
     </div>`
     }
     profileApp.innerHTML = domstring;
-  
+
   };
-  
+
 // PACKAGE RENDER
 const renderPackages = (array) => {
   const packPage = document.querySelector("#packContent")
   let packDomString = "";
   for (package of array) {
-    packDomString += 
-  `<div class="pkgCard" class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h4 class="card-title"><b>${package.packName}</b></h4>
-    <p class="card-text">${package.packDescription}</p>
-    <a href="#" class="btn btn-outline-danger" id="learnMore--${package.id}">Learn More</a>
+    packDomString +=
+  `<div class="pkgCard card">
+      <div class="card-body">
+       <h4 class="card-title"><b>${package.packName}</b></h4>
+        <p class="card-text">${package.packDescription}</p>
+        </div>
   </div>`
   }
   packPage.innerHTML = packDomString
- 
+
 }
+
+// PROJECTS RENDER
+const renderProjects = (array) => {
+  const projectPage = document.querySelector("#projContent")
+  let projDomString = "";
+  for (project of array) {
+    projDomString +=
+  `<div class="prjCard id="projContainer">
+      <div class="card-body">
+       <h4 class="card-title">${project.projName}</h4>
+        <p class="card-text" id="proText">${project.projDescription}</p>
+        <p class="card-text" id="proText">${project.time}</p>
+        <hr></hr>
+        <button class="btn btn-danger" id="delete--${project.id}">Delete</button>
+      </div>
+
+        </div>
+  </div>`
+  }
+  projectPage.innerHTML = projDomString
+}
+
+
+
+
+
+
+// NEW PACKAGE FORM //
+
+
+// const packageForm = document.querySelector("#newPackForm");
+
+
+
+// EVENT LISTENER FOR CREATE BUTTON //
+// createButton.addEventListener("click", () => {
+//   renderPackages( )
+// })
+
+
 
 // USING IF STATEMENTS TO CALL DIFFERENT FUNCTIONS
 if (document.URL.includes("overview.html")) {

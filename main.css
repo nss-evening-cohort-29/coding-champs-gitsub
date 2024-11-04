@@ -16,8 +16,8 @@ body {
 
 /* profile section */
 .item-1 {
-  grid-row: 2 / 10 ;
-  grid-column: 2 / 4;
+  grid-row: 2 / 12 ;
+  grid-column: 1 / 4;
 }
 
 /* navigation bar */
@@ -45,3 +45,85 @@ body {
 }
 
 
+/* PACKAGES */
+.item-pack {
+  display: grid;
+  grid-row: 4 / 7;
+  grid-column: 5 / 13;
+  gap: 10px;
+  padding: 15px;
+}
+
+#packContent {
+  display: grid;
+  grid-row: 4 / 7;
+  grid-column: 6 / 13;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: min-content;
+  gap: 10px; /* Space between cards */
+  padding: 15px;
+}
+
+.pkgCard {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #496c23;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.card-body {
+  padding: 8px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+}
+
+.item-packform {
+  grid-row: 8 / 12 ;
+  grid-column: 5 / 13;
+}
+
+
+/* form */
+.item-4 {
+  grid-row: 8 / 12 ;
+  grid-column: 5 / 13;
+}
+
+
+
+
+/* projects */
+.item-project {
+  grid-row: 4 / 7;
+  grid-column: 5 / 13;
+}
+
+.item-proform {
+  grid-row: 8 / 12 ;
+  grid-column: 5 / 13;
+}
+
+
+
+
+
+
+/* footer */
+.item-5 {
+  grid-row: 14 / 14 ;
+  grid-column: 5 / 13;
+}
