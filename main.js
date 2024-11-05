@@ -1,7 +1,7 @@
 const users =[
   { imageUrl: "https://r2.fluxpro.art/cm026dr040qxm3blvg2nytglv/0.webp",
     id: 1,
-    name: "Monica Powell",
+    name: "Monica Cheng",
     handle: "M0nica",
     description: "Building tech to blal laalkadldld",
     followers: "1.9k",
@@ -114,17 +114,27 @@ const profileApp = document.querySelector("#profile");
   domstring += 
   `<div class="card" id="profile-card">
     <img src=${user.imageUrl} class="card-img-top" alt="${user.id}" id="profile-img">
-    <h4 class="card-title"><b>${user.name}</b></h4>
+
+    <div class="cardTitle" id="profileUsername">
+      <h4 class="card-title"<b>${user.name}</b></h4>
+    </div>
+
     <p class="card-text">${user.handle}</p>
     <p class="card-text">${user.description}</p>
-    <p class="card-text">${user.handle}</p>
 
-    <button type="button" class="btn btn-light">Follow</button>
-    <button type="button" class="btn btn-light">Sponsor</button>
+    <div id="followSponsorButtons">
+      <button type="button" class="btn btn-light">Follow</button>
+      <button type="button" class="btn btn-light">Sponsor</button>
+    </div>
 
-    <p class="card-text">${user.followers}</p>
-    <p class="card-text">${user.following}</p>
-    <p class="card-text">${user.favorites}</p>
+    <div id="favFollowProfile">
+      <p class="card-text">${user.followers} followers</p>
+      <p class="card-text">${user.following} following</p>
+      <p class="card-text">
+        ${user.favorites} 
+        <img src="https://icons.iconarchive.com/icons/github/octicons/512/star-24-icon.png" alt="Icon" style="width: 15px; height: 15px; vertical-align: -1px;">
+      </p>
+    </div>
 
     <p class="card-text">${user.location}</p>
     <p class="card-text">${user.email}</p>
